@@ -1,0 +1,326 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="TangjobLink helps Kenyans explore government vacancies, remote jobs, application requirements and career resources.">
+<title>TangjobLink | Government, Remote Jobs & Training</title>
+<style>
+:root{--navy:#123b73;--blue:#1769aa;--green:#16834a;--ink:#172334;--muted:#607086}*{box-sizing:border-box}body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--ink);background:#f6f8fb;line-height:1.55}header{background:var(--navy);color:#fff;padding:18px 5%;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}.brand{display:flex;align-items:center;gap:12px;font-size:1.55rem;font-weight:800}.logo{display:grid;place-items:center;background:#fff;color:var(--navy);width:44px;height:44px;border-radius:10px;font-weight:900}nav{display:flex;gap:18px;flex-wrap:wrap}nav a{color:#fff;text-decoration:none;font-weight:700}.hero{background:linear-gradient(120deg,#123b73,#1769aa);color:#fff;padding:58px 5% 52px}.hero-inner{max-width:1100px;margin:auto}.eyebrow{text-transform:uppercase;letter-spacing:1.5px;font-size:.78rem;font-weight:800;color:#bfe8ce}h1{font-size:clamp(2rem,5vw,3.5rem);line-height:1.1;margin:12px 0}.hero p{max-width:720px;color:#e5effa;font-size:1.1rem}.search{display:flex;gap:10px;flex-wrap:wrap;margin-top:25px;max-width:800px}.search input,.search select{padding:14px;border:0;border-radius:8px;min-width:170px;flex:1;font-size:1rem}.btn{border:0;border-radius:8px;background:var(--green);color:white;padding:13px 18px;font-weight:800;cursor:pointer}main{max-width:1100px;margin:30px auto;padding:0 20px}.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:14px}.stat,.panel,.job-card{background:#fff;border:1px solid #e0e7ef;border-radius:12px;padding:18px}.stat strong{display:block;color:var(--navy);font-size:1.3rem}.section-head{display:flex;align-items:end;justify-content:space-between;gap:12px;flex-wrap:wrap;margin:32px 0 15px}.section-head h2{margin:0;color:var(--navy)}.jobs{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:15px}.job-card h3{margin:10px 0 5px;color:var(--navy)}.tag{display:inline-block;background:#e7f5ec;color:#116438;padding:4px 9px;border-radius:20px;font-size:.78rem;font-weight:800}.job-card p{color:var(--muted);margin:7px 0}.job-card a,.panel a{color:var(--blue);font-weight:800}.small{font-size:.88rem;color:var(--muted)}.notice{background:#fff9e8;border:1px solid #f1dfa6;border-radius:10px;padding:15px;margin-top:22px}.resources{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:15px}.panel h3{margin-top:0;color:var(--navy)}footer{margin-top:45px;background:#102e54;color:#e7eef7;padding:25px 5%;text-align:center}.empty{display:none;padding:18px;background:#fff;border-radius:10px}@media(max-width:600px){header{align-items:flex-start}.hero{padding-top:40px}.search input,.search select,.search button{min-width:100%;width:100%}}
+
+.training-grid,.contact-grid,.download-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:15px}
+.training-card,.contact-card,.download-card{background:#fff;border:1px solid #dfe7ef;border-radius:12px;padding:18px}
+.training-card h3,.contact-card h3,.download-card h3{color:#123b73;margin-top:8px}
+.training-card a,.contact-card a,.download-card a{color:#1769aa;font-weight:700;overflow-wrap:anywhere}
+.step-number{display:inline-grid;place-items:center;width:30px;height:30px;border-radius:50%;background:#e7f5ec;color:#116438;font-weight:800}
+.cta-link{display:inline-block;background:#16834a;color:#fff!important;text-decoration:none;padding:10px 14px;border-radius:8px;margin-top:8px}
+.contact-highlight{background:#eef5fc;border-radius:12px;padding:18px;margin:16px 0}
+.registration-form{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;margin-top:16px}
+.registration-form label{display:flex;flex-direction:column;gap:6px;font-weight:700;color:#123b73}
+.registration-form input,.registration-form select{width:100%;padding:12px;border:1px solid #cbd6e2;border-radius:8px;font:inherit}
+.payment-panel{background:#eef7f0;border:1px solid #c7e4d0;border-radius:12px;padding:18px;margin:16px 0}
+.payment-number{font-size:1.35rem;font-weight:900;color:#116438;letter-spacing:.4px}
+.platform-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px}
+.platform-card{background:#fff;border:1px solid #dfe7ef;border-radius:12px;padding:16px}
+.platform-card h3{margin:0 0 6px;color:#123b73}.platform-card a{font-weight:800;color:#1769aa;overflow-wrap:anywhere}
+
+
+.group-preview-grid,.group-dashboard-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:14px}
+.group-preview-card,.group-dashboard-card{background:#fff;border:1px solid #dfe7ef;border-radius:12px;padding:18px}
+.group-preview-card h3,.group-dashboard-card h3{color:#123b73;margin:0 0 8px}
+.group-preview-card ul,.group-dashboard-card ul{padding-left:20px;margin:8px 0}
+.group-preview-card li,.group-dashboard-card li{margin:5px 0}
+.locked-label{display:inline-block;background:#fff4d8;color:#785500;border-radius:20px;padding:4px 9px;font-size:.78rem;font-weight:800}
+.group-tools{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px;margin-top:18px}
+.group-tools form{display:grid;gap:10px}
+.group-tools input,.group-tools select,.group-tools textarea{width:100%;padding:11px;border:1px solid #cbd6e2;border-radius:8px;font:inherit}
+.member-row{border:1px solid #dfe7ef;border-radius:8px;padding:12px;margin:8px 0;background:#fff;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;align-items:center}
+.message-list,.meeting-list{display:grid;gap:10px}
+.message-item,.meeting-item{background:#f5f8fc;border-radius:8px;padding:12px}
+.message-item p,.meeting-item p{margin:5px 0}
+
+</style></head>
+<body>
+<header><div class="brand"><span class="logo">T</span><span>TangjobLink</span></div><nav aria-label="Main navigation"><a href="#jobs">Find Jobs</a><a href="#requirements">Requirements</a><a href="#resources">Resources</a><a href="#beginner-training">Beginner Training</a><a href="#training-registration">Join Live Training</a><a href="#group-preview">Training Groups</a><a href="#member-center">Member Login</a><a href="#remote-platforms">Remote Job Links</a><a href="#contact">Contact</a><a href="#other-website">Other Website</a></nav></header>
+<section class="hero"><div class="hero-inner"><div class="eyebrow">Your next opportunity starts here</div><h1>Find Government &amp; Remote Jobs</h1><p>TangjobLink helps job seekers in Kenya explore public-sector vacancies, remote-work opportunities, application requirements and trusted career resources.</p><form class="search" id="searchForm"><input id="keyword" type="search" placeholder="Search jobs or skills" aria-label="Search jobs or skills"><select id="type" aria-label="Job category"><option value="">All job categories</option><option value="Government">Government jobs</option><option value="Remote">Remote jobs</option><option value="Career">Career resources</option></select><button class="btn" type="submit">Search opportunities</button></form></div></section>
+<main><section class="stats"><div class="stat"><strong>Government</strong><span>Public-service vacancy resources</span></div><div class="stat"><strong>Remote work</strong><span>Explore online job pathways</span></div><div class="stat"><strong>Requirements</strong><span>Prepare your application documents</span></div></section>
+<section id="jobs"><div class="section-head"><h2>Explore opportunities</h2><span class="small">Verify each vacancy on its official website.</span></div><div class="jobs" id="jobList">
+<article class="job-card" data-type="Government" data-keywords="public service government PSC vacancies civil servant"><span class="tag">Government</span><h3>Public Service vacancies</h3><p>Look for advertised public-service positions and review each role's qualifications and closing date.</p><p><strong>Common requirements:</strong> relevant education, national ID, CV and role-specific documents.</p><a href="https://www.publicservice.go.ke/" target="_blank" rel="noopener noreferrer">Visit Public Service Commission ↗</a></article>
+<article class="job-card" data-type="Government" data-keywords="county government jobs county public service board Kenya"><span class="tag">Government</span><h3>County government jobs</h3><p>Check county public-service boards for local vacancies, application forms and official deadlines.</p><p><strong>Common requirements:</strong> role-specific qualifications and completed application forms.</p><a href="https://www.mygov.go.ke/" target="_blank" rel="noopener noreferrer">Visit MyGov Kenya ↗</a></article>
+<article class="job-card" data-type="Government" data-keywords="Kenya careers public jobs recruitment official"><span class="tag">Government</span><h3>National government opportunities</h3><p>Use official government announcements to locate recruitment notices and application instructions.</p><p><strong>Tip:</strong> confirm the employer and advert before sharing personal documents.</p><a href="https://www.mygov.go.ke/" target="_blank" rel="noopener noreferrer">View government notices ↗</a></article>
+<article class="job-card" data-type="Remote" data-keywords="remote jobs work from home online customer service support"><span class="tag">Remote</span><h3>Remote customer support</h3><p>Search for online customer service, virtual assistance and support roles. Eligibility depends on the employer.</p><p><strong>Prepare:</strong> CV, reliable internet, quiet workspace and communication skills.</p><a href="https://www.linkedin.com/jobs/" target="_blank" rel="noopener noreferrer">Search LinkedIn Jobs ↗</a></article>
+<article class="job-card" data-type="Remote" data-keywords="AI training data annotation evaluator remote jobs"><span class="tag">Remote</span><h3>AI training and data tasks</h3><p>Explore annotation, search evaluation and AI response review work; check country eligibility before applying.</p><p><strong>Prepare:</strong> strong reading, research, attention to detail and any required assessments.</p><a href="https://www.linkedin.com/jobs/" target="_blank" rel="noopener noreferrer">Find related roles ↗</a></article>
+<article class="job-card" data-type="Remote" data-keywords="freelance writing design programming online work"><span class="tag">Remote</span><h3>Freelance online work</h3><p>Look for writing, design, programming and virtual-assistant projects that match your skills.</p><p><strong>Prepare:</strong> portfolio samples, a clear profile and agreed payment terms.</p><a href="https://www.upwork.com/" target="_blank" rel="noopener noreferrer">Explore Upwork ↗</a></article>
+<article class="job-card" data-type="Career" data-keywords="CV resume cover letter application requirements"><span class="tag">Career resource</span><h3>CV and application preparation</h3><p>Build a role-focused CV and cover letter. Follow the instructions and file formats in each advert.</p><p><strong>Prepare:</strong> education, genuine experience, skills and reachable contact details.</p><a href="https://www.mygov.go.ke/" target="_blank" rel="noopener noreferrer">Review official notices ↗</a></article></div><p class="empty" id="empty">No matching items found. Try another keyword or category.</p></section>
+<section id="requirements"><div class="section-head"><h2>Common job application requirements</h2></div><div class="resources"><div class="panel"><h3>Documents</h3><p>Updated CV, national ID details, education certificates and any documents explicitly requested by the employer.</p></div><div class="panel"><h3>Remote-work readiness</h3><p>Reliable internet, a suitable device, communication skills, time management and role-specific digital skills.</p></div><div class="panel"><h3>Before you apply</h3><p>Read eligibility rules, location restrictions, deadlines, salary terms and the official application process.</p></div></div><div class="notice"><strong>Scam alert:</strong> Never pay an unverified recruiter to guarantee a job. Confirm vacancies on the employer's official website and be careful with requests for passwords, PINs or one-time codes.</div></section>
+<section id="resources"><div class="section-head"><h2>Trusted starting points</h2></div><div class="resources"><div class="panel"><h3>Public Service Commission</h3><p>Official public-service recruitment information.</p><a href="https://www.publicservice.go.ke/" target="_blank" rel="noopener noreferrer">publicservice.go.ke ↗</a></div><div class="panel"><h3>MyGov Kenya</h3><p>Government notices and public announcements.</p><a href="https://www.mygov.go.ke/" target="_blank" rel="noopener noreferrer">mygov.go.ke ↗</a></div><div class="panel"><h3>LinkedIn Jobs</h3><p>Search job listings and review employer requirements.</p><a href="https://www.linkedin.com/jobs/" target="_blank" rel="noopener noreferrer">linkedin.com/jobs ↗</a></div></div><p class="small">TangjobLink is an independent job-information website, not a government agency or recruiter. Listings shown here are examples of job categories and resources, not confirmed current vacancies. Always verify availability, eligibility and deadlines at the official source.</p></section>
+<section id="beginner-training">
+  <div class="section-head"><h2>Beginner Remote Jobs Training & Tool Hub</h2><span class="small">Start learning step by step</span></div>
+  <p>New to online work? Follow this learning path to build practical skills, practise with common tools and prepare for real applications. Training links below are external resources; TangjobLink does not guarantee jobs or earnings.</p>
+  <div class="training-grid">
+    <article class="training-card"><span class="step-number">1</span><h3>Remote-work basics</h3><p>Learn how remote work, freelance projects, client communication, deadlines and online professionalism work.</p><a href="https://academy.hubspot.com/" target="_blank" rel="noopener noreferrer">Free HubSpot Academy courses ↗</a></article>
+    <article class="training-card"><span class="step-number">2</span><h3>Computer & productivity tools</h3><p>Practise email, documents, spreadsheets, calendars, file sharing and online meetings.</p><a href="https://support.microsoft.com/training" target="_blank" rel="noopener noreferrer">Microsoft training ↗</a><br><a href="https://workspace.google.com/learning-center/" target="_blank" rel="noopener noreferrer">Google Workspace Learning Center ↗</a></article>
+    <article class="training-card"><span class="step-number">3</span><h3>CV, profile & applications</h3><p>Prepare a truthful CV, create a clear work profile, write short proposals and learn how to check job requirements.</p><a href="https://www.linkedin.com/learning/" target="_blank" rel="noopener noreferrer">Explore LinkedIn Learning ↗</a></article>
+    <article class="training-card"><span class="step-number">4</span><h3>AI training & data annotation</h3><p>Build reading comprehension, careful labelling, fact-checking, research and written explanation skills. Apply only to projects open to your country.</p><a href="https://www.oneforma.com/projects/" target="_blank" rel="noopener noreferrer">Practise by reviewing project requirements ↗</a></article>
+    <article class="training-card"><span class="step-number">5</span><h3>Freelance project practice</h3><p>Choose one service—such as virtual assistance, writing, design, data entry or web development—and prepare 2–3 sample projects.</p><a href="https://www.upwork.com/resources" target="_blank" rel="noopener noreferrer">Upwork learning resources ↗</a><br><a href="https://www.canva.com/designschool/" target="_blank" rel="noopener noreferrer">Canva Design School ↗</a></article>
+    <article class="training-card"><span class="step-number">6</span><h3>Essential tools checklist</h3><p>Computer or smartphone, reliable internet, professional email, CV, word processor, spreadsheet app, video-call app, secure passwords and a way to track applications.</p><p><strong>Optional by role:</strong> Canva, project boards, coding tools, headset or portfolio website.</p></article>
+  </div>
+  <div class="notice"><strong>Beginner tip:</strong> Never pay a recruiter to guarantee a job. Do not share passwords, M-Pesa PINs, one-time codes or sensitive identity documents with unverified contacts. Confirm whether a US remote role accepts applicants living in Kenya.</div>
+</section>
+<section id="training-registration">
+  <div class="section-head"><h2>Register for Live Remote Jobs Training</h2><span class="small">One-time registration fee: KSh 300</span></div>
+  <p>For beginners who want guided live-session training, practical tool demonstrations and support finding remote-job tasks. Complete the form and send your registration request through WhatsApp. Your place in the training group is confirmed only after the KSh 300 payment is verified.</p>
+  <div class="payment-panel">
+    <h3>Pay using M-Pesa Paybill</h3>
+    <p><strong>Paybill number</strong></p><div class="payment-number">247247</div>
+    <p><strong>Account number</strong></p><div class="payment-number">0112825493</div>
+    <p><strong>Amount:</strong> KSh 300 (one-time training registration)</p>
+    <p class="small">After paying, keep your M-Pesa confirmation message and send the transaction code to the official TangjobLink WhatsApp support contact for manual verification. Do not share your M-Pesa PIN or one-time password. This website does not automatically verify payments.</p>
+  </div>
+  <form id="trainingRegistrationForm" class="registration-form">
+    <label>Full name<input id="traineeName" name="name" autocomplete="name" required placeholder="Enter your full name"></label>
+    <label>Phone number<input id="traineePhone" name="phone" autocomplete="tel" required placeholder="e.g. 07XXXXXXXX"></label>
+    <label>Email address (optional)<input id="traineeEmail" name="email" type="email" autocomplete="email" placeholder="you@example.com"></label>
+    <label>Training level<select id="traineeLevel" name="level" required><option value="">Choose your level</option><option>Complete beginner</option><option>Some online-work experience</option><option>Looking for AI training/data tasks</option><option>Looking for freelance projects</option></select></label>
+    <div style="grid-column:1/-1"><button class="btn" type="submit">Register and send request on WhatsApp</button></div>
+  </form>
+  <p class="small">Submitting this form opens WhatsApp with the details you entered; it does not save them to this website. After payment verification, TangjobLink support will provide the live training schedule and group joining instructions.</p>
+</section>
+<section id="group-preview">
+  <div class="section-head"><h2>Remote Jobs &amp; Tool Hub — Group Preview</h2><span class="locked-label">Lesson access for active members</span></div>
+  <p>Before registering, you can preview the learning categories and topics below. Detailed lessons, group discussions, and meeting schedules are available inside TangjobLink after registration and payment verification.</p>
+  <div class="group-preview-grid">
+    <article class="group-preview-card" data-group="Beginner Group"><h3>Beginner Group</h3><p><strong>Joining fee: KSh 300</strong></p><ul><li>Computer and internet basics</li><li>Creating professional email accounts</li><li>LinkedIn</li><li>Setting up a proxy correctly</li><li>Introduction to remote jobs</li><li>Essential tools and online safety</li><li>Creating a professional resume and profile</li><li>Introduction to AI tools</li></ul><button class="btn join-group-btn" type="button" data-join-group="Beginner Group" style="margin-top:10px">Join Beginner Group</button></article>
+    <article class="group-preview-card" data-group="Intermediate Group"><h3>Intermediate Group</h3><p><strong>Joining fee: KSh 500</strong></p><ul><li>Registering on legitimate job platforms</li><li>AI training and data annotation</li><li>Virtual assistance</li><li>Research and transcription</li><li>LinkedIn and online portfolios</li><li>Job applications and interview preparation</li></ul><button class="btn join-group-btn" type="button" data-join-group="Intermediate Group" style="margin-top:10px">Join Intermediate Group</button></article>
+    <article class="group-preview-card" data-group="Advanced Group"><h3>Advanced Group</h3><p><strong>Joining fee: KSh 700</strong></p><ul><li>Advanced AI tools and workflows</li><li>Technical and specialized remote jobs</li><li>Client communication and freelancing</li><li>Productivity and project management tools</li><li>Building a portfolio of completed work</li><li>Payment methods and income management</li></ul><button class="btn join-group-btn" type="button" data-join-group="Advanced Group" style="margin-top:10px">Join Advanced Group</button></article>
+    <article class="group-preview-card" data-group="Professional Group"><h3>Professional Group</h3><p><strong>Joining fee: KSh 1,000</strong></p><ul><li>Securing international clients</li><li>Specialized AI evaluation and research</li><li>Freelance business management</li><li>US college applications and scholarships</li><li>FAFSA and student-loan education for eligible US citizens</li><li>Tax filing and FEMA application guidance</li></ul><button class="btn join-group-btn" type="button" data-join-group="Professional Group" style="margin-top:10px">Join Professional Group</button></article>
+    <article class="group-preview-card" data-group="Elite Group"><h3>Elite Group</h3><p><strong>Joining fee: KSh 1,300</strong></p><ul><li>Dark web awareness and cybersecurity</li><li>Mentorship and peer training</li><li>Verified opportunities and professional workflows</li><li>US banking education and lawful account eligibility</li><li>Forex risks and other advanced online business topics</li></ul><button class="btn join-group-btn" type="button" data-join-group="Elite Group" style="margin-top:10px">Join Elite Group</button></article>
+  </div>
+  <div class="notice"><strong>Safety note:</strong> Cybersecurity and dark-web lessons focus on lawful safety, threat awareness and defensive practices. Banking, forex and financial topics are educational only; eligibility varies and profits are never guaranteed.</div>
+</section>
+
+<section id="member-center">
+  <div class="section-head"><h2>Member Login &amp; Training Group</h2><span class="small">Protected member dashboard</span></div>
+  <div class="contact-highlight">
+    <h3>Register or sign in to enter the TangjobLink group</h3>
+    <p>Choose one training group and its fee below. After you register, submit your M-Pesa transaction code, and an administrator verifies the payment and approves your membership, you will enter the matching member dashboard on this website. You will not need a separate external group link.</p>
+    <p><strong>M-Pesa Paybill:</strong> 247247 &nbsp; <strong>Account:</strong> 0112825493</p>
+    <p class="small">After payment, enter your M-Pesa transaction code below. Access remains pending until TangjobLink verifies payment. Never provide your M-Pesa PIN, Social Security number, tax documents or bank credentials to a trainer.</p>
+  </div>
+  <div class="panel" style="margin-bottom:16px">
+    <h3>Member account</h3>
+    <form id="memberAuthForm" class="registration-form">
+      <label>Full name<input id="memberName" autocomplete="name" placeholder="Your full name"></label>
+      <label>Email address<input id="memberEmail" type="email" autocomplete="email" required placeholder="you@example.com"></label>
+      <label>National ID No.<input id="memberIdNumber" autocomplete="off" minlength="5" maxlength="30" placeholder="Enter your ID number"></label>
+      <label>Username<input id="memberUsername" autocomplete="username" minlength="3" maxlength="30" pattern="[A-Za-z0-9_.-]+" placeholder="Choose a username"></label>
+      <label>Phone number (optional)<input id="memberPhone" autocomplete="tel" placeholder="07XXXXXXXX"></label>
+      <label>Choose training group<select id="selectedGroup" required><option value="Beginner Group">Beginner Group — KSh 300</option><option value="Intermediate Group">Intermediate Group — KSh 500</option><option value="Advanced Group">Advanced Group — KSh 700</option><option value="Professional Group">Professional Group — KSh 1,000</option><option value="Elite Group">Elite Group — KSh 1,300</option></select></label>
+      <p id="selectedGroupFee" class="small" style="grid-column:1/-1"><strong>Selected fee: KSh 300</strong></p>
+      <label>Password<input id="memberPassword" type="password" autocomplete="new-password" minlength="8" required placeholder="At least 8 characters"></label>
+      <div style="grid-column:1/-1;display:flex;gap:10px;flex-wrap:wrap"><button class="btn" id="signUpBtn" type="button">Register</button><button class="btn" type="submit">Sign in</button><button class="btn" id="resetPasswordBtn" type="button">Reset password</button><button class="btn" id="signOutBtn" type="button" hidden>Sign out</button></div>
+    </form>
+    <p id="authMessage" class="small" role="status" aria-live="polite">To enable accounts, first configure your separate TangjobLink Supabase project using the included setup guide.</p>
+    <div id="paymentReferencePanel" hidden style="margin-top:16px">
+      <h3>Payment step</h3>
+      <p id="paymentAmountPrompt" class="small"><strong>Amount due:</strong> select a group to see its fee.</p>
+      <p class="small">Pay the exact amount using the M-Pesa Paybill and account below. After paying, enter only the M-Pesa transaction code. This site does not verify payment automatically; the administrator must check it before approving access.</p>
+      <label for="paymentReference" style="display:block;font-weight:700;color:#123b73;margin-bottom:6px">M-Pesa transaction code</label>
+      <input id="paymentReference" style="width:100%;max-width:450px;padding:12px;border:1px solid #cbd6e2;border-radius:8px;font:inherit" placeholder="e.g. QAB12XYZ34">
+      <button class="btn" id="submitPaymentReference" type="button" style="margin-top:10px">Submit for verification</button>
+      <p id="membershipStatus" class="small" role="status" aria-live="polite"></p>
+    </div>
+  </div>
+  <div id="memberLessons" hidden>
+    <div class="section-head"><h2>Your Remote Jobs &amp; Tool Hub</h2><span class="tag">Active membership</span></div>
+    <p>Welcome to your private group dashboard. Select your learning level, join discussions, and check upcoming sessions below.</p>
+    <div id="memberGroupDashboard" class="group-dashboard-grid"></div>
+    <div class="group-tools">
+      <article class="panel"><h3>Group discussion</h3><p class="small">Share learning questions and practical tips with members. Do not post passwords, identity numbers, tax records, or bank details.</p><form id="groupMessageForm"><label for="groupMessageText">Your message</label><textarea id="groupMessageText" rows="3" maxlength="1500" required placeholder="Ask a training question or share a learning tip"></textarea><button class="btn" type="submit">Post to group</button></form><div id="groupMessages" class="message-list" aria-live="polite"></div></article>
+      <article class="panel"><h3>Upcoming meetings</h3><div id="groupMeetings" class="meeting-list"><p class="small">Loading scheduled meetings…</p></div></article>
+    </div>
+    <div id="adminDashboard" hidden style="margin-top:24px">
+      <div class="section-head"><h2>Administrator control panel</h2><span class="tag">Admin only</span></div>
+      <p class="small">Manage member access and schedule group meetings. Removing a member revokes their group access. To permanently delete an Auth account, use the Supabase dashboard.</p>
+      <div class="group-tools">
+        <article class="panel"><h3>Member management</h3><div id="adminMembers"><p class="small">Loading members…</p></div></article>
+        <article class="panel"><h3>Schedule a meeting</h3><form id="meetingForm"><label>Meeting title<input id="meetingTitle" required maxlength="120" placeholder="e.g. Beginner group: Email and LinkedIn"></label><label>Group<select id="meetingGroup" required><option>All groups</option><option>Beginner Group</option><option>Intermediate Group</option><option>Advanced Group</option><option>Professional Group</option><option>Elite Group</option></select></label><label>Date and time<input id="meetingStart" type="datetime-local" required></label><label>Meeting link (optional)<input id="meetingLink" type="url" placeholder="https://..."></label><label>Notes (optional)<textarea id="meetingNotes" rows="2" maxlength="1000"></textarea></label><button class="btn" type="submit">Publish meeting</button></form><p id="adminStatus" class="small" role="status"></p></article>
+      </div>
+      <article class="panel" style="margin-top:16px"><h3>Manage scheduled meetings</h3><div id="adminMeetings"></div></article>
+    </div>
+    <details style="margin-top:24px"><summary><strong>US college, FAFSA, scholarships, student loans, tax and FEMA learning resources</strong></summary><p class="small">These detailed resources are available only while you have active membership.</p><div id="memberResourceList" class="training-grid"></div></details>
+  </div>
+  <div class="notice"><strong>Privacy and eligibility:</strong> Only the public Supabase project URL and anon/publishable key belong in the website configuration. Never put a Supabase service-role key, M-Pesa secret, tax record, SSN or password in website code. College, FAFSA, loan, tax and FEMA rules vary by applicant and program; use the official links and current instructions.</div>
+</section>
+<section id="remote-platforms">
+  <div class="section-head"><h2>Remote jobs and task platforms</h2><span class="small">Browse current projects and openings</span></div>
+  <p>Use these links to look for freelance projects, AI training, data annotation, search evaluation, customer support and other remote tasks. Hiring changes frequently; availability, country eligibility and assessments differ by platform. These are search links, not a guarantee of a job.</p>
+  <div class="platform-grid">
+    <article class="platform-card"><h3>Upwork</h3><p>Freelance projects: writing, admin, design, coding and more.</p><a href="https://www.upwork.com/nx/search/jobs/" target="_blank" rel="noopener noreferrer">Browse projects ↗</a></article>
+    <article class="platform-card"><h3>Fiverr</h3><p>Offer services to clients as a freelancer.</p><a href="https://www.fiverr.com/" target="_blank" rel="noopener noreferrer">Explore Fiverr ↗</a></article>
+    <article class="platform-card"><h3>Freelancer</h3><p>Bid on online freelance projects and contests.</p><a href="https://www.freelancer.com/jobs/" target="_blank" rel="noopener noreferrer">Browse jobs ↗</a></article>
+    <article class="platform-card"><h3>PeoplePerHour</h3><p>Freelance services and client projects.</p><a href="https://www.peopleperhour.com/freelance-jobs" target="_blank" rel="noopener noreferrer">Browse projects ↗</a></article>
+    <article class="platform-card"><h3>Outlier</h3><p>AI training opportunities when projects are open for your location and skills.</p><a href="https://outlier.ai/" target="_blank" rel="noopener noreferrer">Check opportunities ↗</a></article>
+    <article class="platform-card"><h3>OneForma</h3><p>Data collection, language, annotation and AI-related projects.</p><a href="https://www.oneforma.com/jobs/" target="_blank" rel="noopener noreferrer">Browse projects ↗</a></article>
+    <article class="platform-card"><h3>CrowdGen by Appen</h3><p>Crowdsourcing and AI data projects.</p><a href="https://crowdgen.com/" target="_blank" rel="noopener noreferrer">Find projects ↗</a></article>
+    <article class="platform-card"><h3>TELUS Digital AI Community</h3><p>AI data, search evaluation and language-related roles.</p><a href="https://www.telusdigital.com/careers/ai-community" target="_blank" rel="noopener noreferrer">Explore roles ↗</a></article>
+    <article class="platform-card"><h3>Clickworker</h3><p>Microtasks and data-related work where available.</p><a href="https://www.clickworker.com/clickworker/" target="_blank" rel="noopener noreferrer">Get started ↗</a></article>
+    <article class="platform-card"><h3>DataAnnotation</h3><p>AI response evaluation work; check whether applicants in Kenya are accepted.</p><a href="https://www.dataannotation.tech/" target="_blank" rel="noopener noreferrer">Check eligibility ↗</a></article>
+    <article class="platform-card"><h3>LinkedIn Jobs</h3><p>Search remote roles by skill, employer and location.</p><a href="https://www.linkedin.com/jobs/search/?keywords=remote" target="_blank" rel="noopener noreferrer">Search remote jobs ↗</a></article>
+    <article class="platform-card"><h3>Indeed</h3><p>Search remote and work-from-home vacancies.</p><a href="https://www.indeed.com/q-remote-jobs.html" target="_blank" rel="noopener noreferrer">Search vacancies ↗</a></article>
+    <article class="platform-card"><h3>Remote.co</h3><p>Remote job listings across multiple career categories.</p><a href="https://remote.co/remote-jobs/" target="_blank" rel="noopener noreferrer">Browse remote jobs ↗</a></article>
+    <article class="platform-card"><h3>We Work Remotely</h3><p>Remote roles in programming, support, sales, design and other fields.</p><a href="https://weworkremotely.com/" target="_blank" rel="noopener noreferrer">Browse jobs ↗</a></article>
+    <article class="platform-card"><h3>RWS</h3><p>Language, AI and data-related freelance opportunities.</p><a href="https://www.rws.com/about/careers/" target="_blank" rel="noopener noreferrer">Search careers ↗</a></article>
+    <article class="platform-card"><h3>Welocalize</h3><p>Search evaluation, language and digital content roles.</p><a href="https://jobs.lever.co/welocalize" target="_blank" rel="noopener noreferrer">Browse openings ↗</a></article>
+  </div>
+  <div class="notice"><strong>Important:</strong> No platform can guarantee ongoing tasks or income. Never pay a platform or recruiter to unlock a job, and never use a VPN or false location to bypass eligibility rules. Check each project's terms before applying.</div>
+</section>
+<section id="contact">
+  <div class="section-head"><h2>Need help? Contact TangjobLink</h2></div>
+  <p>Contact us for help finding job links, getting started with remote-work tools or navigating the website.</p>
+  <div class="contact-grid">
+    <div class="contact-card"><h3>Call us</h3><p>Speak to the TangjobLink support contact.</p><a class="cta-link" href="tel:0797858453">Call 0797858453</a></div>
+    <div class="contact-card"><h3>WhatsApp</h3><p>Send a WhatsApp message for support.</p><a class="cta-link" href="https://wa.me/254797858453" target="_blank" rel="noopener noreferrer">WhatsApp 0797858453</a></div>
+    <div class="contact-card"><h3>Email support</h3><p>Send your question by email.</p><a class="cta-link" href="mailto:rtltd.jobs@gmail.com">rtltd.jobs@gmail.com</a></div>
+  </div>
+</section>
+<section id="other-website">
+  <div class="section-head"><h2>Other website</h2></div>
+  <div class="download-grid">
+    <div class="download-card"><h3>Visit another website</h3><p>Open the official MyGov Kenya website for public notices and government announcements.</p><a href="https://www.mygov.go.ke/" target="_blank" rel="noopener noreferrer">Visit MyGov Kenya ↗</a></div>
+  </div>
+</section>
+
+</main>
+<footer><strong>TangjobLink</strong><br>Connecting Kenyans with job information and career opportunities.<br><span class="small" style="color:#cbd7e5">© 2026 TangjobLink</span></footer>
+<script>const form=document.getElementById('searchForm'),keyword=document.getElementById('keyword'),type=document.getElementById('type'),cards=[...document.querySelectorAll('.job-card')],empty=document.getElementById('empty');function filterJobs(){const q=keyword.value.trim().toLowerCase(),t=type.value;let shown=0;cards.forEach(card=>{const matchesText=(card.innerText+' '+card.dataset.keywords).toLowerCase().includes(q),matchesType=!t||card.dataset.type===t,visible=matchesText&&matchesType;card.style.display=visible?'':'none';if(visible)shown++});empty.style.display=shown?'none':'block'}form.addEventListener('submit',e=>{e.preventDefault();filterJobs();document.getElementById('jobs').scrollIntoView({behavior:'smooth'})});keyword.addEventListener('input',filterJobs);type.addEventListener('change',filterJobs);
+const trainingForm=document.getElementById('trainingRegistrationForm');
+trainingForm.addEventListener('submit',function(e){e.preventDefault();const name=document.getElementById('traineeName').value.trim(),phone=document.getElementById('traineePhone').value.trim(),email=document.getElementById('traineeEmail').value.trim(),level=document.getElementById('traineeLevel').value;const message='TangjobLink Live Remote Jobs Training Registration%0AName: '+encodeURIComponent(name)+'%0APhone: '+encodeURIComponent(phone)+'%0AEmail: '+encodeURIComponent(email||'Not provided')+'%0ALevel: '+encodeURIComponent(level)+'%0AFee: KSh 300%0APaybill: 247247%0AAccount: 0112825493%0APayment transaction code: I will provide this for verification.%0APlease send me the training schedule and group joining instructions after payment verification.';window.open('https://wa.me/254797858453?text='+message,'_blank','noopener');});</script>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script>
+// SETUP REQUIRED: replace these two placeholders with the Project URL and anon/publishable key
+// from your separate TangjobLink Supabase project. Never use the service_role key here.
+const TANGJOBLINK_SUPABASE_URL = "PASTE_YOUR_SUPABASE_PROJECT_URL_HERE";
+const TANGJOBLINK_SUPABASE_ANON_KEY = "PASTE_YOUR_SUPABASE_ANON_KEY_HERE";
+(function(){
+  const $ = id => document.getElementById(id);
+  const msg = (text) => { $('authMessage').textContent = text; };
+  const groupFees = {'Beginner Group':300,'Intermediate Group':500,'Advanced Group':700,'Professional Group':1000,'Elite Group':1300};
+  function updateGroupFee(){const group=$('selectedGroup').value;const fee=groupFees[group]||0;$('selectedGroupFee').textContent='Selected fee: KSh '+fee.toLocaleString('en-KE');const amountPrompt=$('paymentAmountPrompt');if(amountPrompt)amountPrompt.textContent='Amount due for '+group+': KSh '+fee.toLocaleString('en-KE');}
+  // Join buttons must work even before Supabase is configured: they navigate to registration and preselect the chosen group.
+  document.querySelectorAll('[data-join-group]').forEach(btn=>btn.addEventListener('click',()=>{const group=btn.dataset.joinGroup;if(groupFees[group])$('selectedGroup').value=group;updateGroupFee();$('member-center').scrollIntoView({behavior:'smooth',block:'start'});$('memberName').focus({preventScroll:true});}));
+  $('selectedGroup').addEventListener('change',updateGroupFee);updateGroupFee();
+  const configured = TANGJOBLINK_SUPABASE_URL.startsWith('https://') && !TANGJOBLINK_SUPABASE_URL.includes('PASTE_') && !TANGJOBLINK_SUPABASE_ANON_KEY.includes('PASTE_');
+  if (!window.supabase || !configured) {
+    msg('Registration page is ready, but account creation needs setup: create a separate Supabase project, run supabase_setup.sql, then add its Project URL and anon/publishable key as explained in README_SETUP.txt.');
+    $('signUpBtn').disabled=true;
+    $('memberAuthForm').addEventListener('submit',e=>e.preventDefault());
+    return;
+  }
+  const client = window.supabase.createClient(TANGJOBLINK_SUPABASE_URL, TANGJOBLINK_SUPABASE_ANON_KEY);
+  let currentUser = null;
+  function safeText(tag, value){ const el=document.createElement(tag); el.textContent=value || ''; return el; }
+  $('selectedGroup').addEventListener('change',updateGroupFee);
+  const groupData = [
+    {name:'Beginner Group',topics:['Computer and internet basics','Creating professional email accounts','LinkedIn','Setting up a proxy correctly','Introduction to remote jobs','Essential tools and online safety','Creating a professional resume and profile','Introduction to AI tools']},
+    {name:'Intermediate Group',topics:['Registering on legitimate job platforms','AI training and data annotation','Virtual assistance','Research and transcription','LinkedIn and online portfolios','Job applications and interview preparation']},
+    {name:'Advanced Group',topics:['Advanced AI tools and workflows','Technical and specialized remote jobs','Client communication and freelancing','Productivity and project management tools','Building a portfolio of completed work','Payment methods and income management']},
+    {name:'Professional Group',topics:['Securing international clients','Specialized AI evaluation and research','Freelance business management','US college applications and scholarships','FAFSA and student-loan education for eligible US citizens','Tax filing and FEMA application guidance']},
+    {name:'Elite Group',topics:['Dark web awareness and cybersecurity','Mentorship and peer training','Verified opportunities and professional workflows','US banking education and lawful account eligibility','Forex risks and advanced online business topics']}
+  ];
+  function renderResources(rows){
+    const host=$('memberResourceList'); host.replaceChildren();
+    if(!rows.length){ host.append(safeText('p','No additional application lessons are available yet.')); return; }
+    rows.forEach(r=>{
+      const card=document.createElement('article'); card.className='training-card';
+      card.append(safeText('h3',r.title)); card.append(safeText('p',r.summary));
+      if(r.required_documents){const p=document.createElement('p');p.append(safeText('strong','Typical documents: '),document.createTextNode(r.required_documents));card.append(p);}
+      if(r.tools){const p=document.createElement('p');p.append(safeText('strong','Tools: '),document.createTextNode(r.tools));card.append(p);}
+      if(Array.isArray(r.links)) r.links.forEach(link=>{if(link&&typeof link.url==='string'&&link.url.startsWith('https://')){const a=safeText('a',link.label||'Official resource');a.href=link.url;a.target='_blank';a.rel='noopener noreferrer';a.style.display='inline-block';a.style.margin='6px 12px 0 0';card.append(a);}});
+      host.append(card);
+    });
+  }
+  function renderGroups(selectedGroupName){
+    const host=$('memberGroupDashboard');host.replaceChildren();
+    groupData.filter(group=>group.name===selectedGroupName).forEach((group,index)=>{const card=document.createElement('article');card.className='group-dashboard-card';card.append(safeText('h3',group.name));card.append(safeText('p','Joining fee: KSh '+groupFees[group.name].toLocaleString('en-KE')));card.append(safeText('p',index===0?'Start with essential digital skills and online safety.':index===1?'Build job-platform skills and practical task experience.':index===2?'Develop advanced workflows and client delivery.':index===3?'Explore professional business and US application topics.':'Focus on mentorship, security awareness and advanced opportunities.'));const list=document.createElement('ul');group.topics.forEach(topic=>list.append(safeText('li',topic)));card.append(list);host.append(card);});
+  }
+  async function loadMeetings(isAdmin){
+    const {data,error}=await client.from('group_meetings').select('id,title,group_name,starts_at,meeting_url,notes').order('starts_at',{ascending:true});
+    const host=$('groupMeetings');host.replaceChildren();if(error){host.append(safeText('p','Meetings could not load. Check the database setup.'));return;}
+    const selectedGroupName=document.getElementById('selectedGroup').value;const future=(data||[]).filter(m=>(m.group_name==='All groups'||m.group_name===selectedGroupName)&&new Date(m.starts_at).getTime()>=Date.now()-86400000);
+    if(!future.length)host.append(safeText('p','No meetings are scheduled yet. Check back here for the next session.'));
+    future.forEach(m=>{const item=document.createElement('div');item.className='meeting-item';item.append(safeText('strong',m.title));item.append(safeText('p',m.group_name+' · '+new Date(m.starts_at).toLocaleString()));if(m.notes)item.append(safeText('p',m.notes));if(m.meeting_url&&m.meeting_url.startsWith('https://')){const a=safeText('a','Open meeting link');a.href=m.meeting_url;a.target='_blank';a.rel='noopener noreferrer';item.append(a);}host.append(item);});
+    if(isAdmin){const adminHost=$('adminMeetings');adminHost.replaceChildren();(data||[]).forEach(m=>{const row=document.createElement('div');row.className='member-row';const info=document.createElement('div');info.append(safeText('strong',m.title),safeText('p',m.group_name+' · '+new Date(m.starts_at).toLocaleString()));const btn=safeText('button','Delete meeting');btn.type='button';btn.className='btn';btn.addEventListener('click',async()=>{if(!confirm('Delete this scheduled meeting?'))return;const {error:delErr}=await client.from('group_meetings').delete().eq('id',m.id);$('adminStatus').textContent=delErr?'Could not delete meeting: '+delErr.message:'Meeting deleted.';await loadMeetings(true);});row.append(info,btn);adminHost.append(row);});}
+  }
+  async function loadMessages(){
+    const host=$('groupMessages');host.replaceChildren();const {data,error}=await client.from('group_messages').select('id,message,created_at,author_name,group_name').eq('group_name',$('selectedGroup').value).order('created_at',{ascending:false}).limit(40);
+    if(error){host.append(safeText('p','Group messages could not load.'));return;}if(!data?.length){host.append(safeText('p','No messages yet. Start a helpful discussion.'));return;}
+    data.forEach(m=>{const item=document.createElement('div');item.className='message-item';item.append(safeText('strong',m.author_name||'Member'),safeText('p',m.message),safeText('small',new Date(m.created_at).toLocaleString()));host.append(item);});
+  }
+  async function loadAdminMembers(){
+    const host=$('adminMembers');host.replaceChildren();const {data,error}=await client.from('member_profiles').select('user_id,email,full_name,username,id_number,phone,selected_group,membership_status,payment_reference,created_at').order('created_at',{ascending:false});
+    if(error){host.append(safeText('p','Could not load members: '+error.message));return;}
+    if(!data?.length){host.append(safeText('p','No registered members found.'));return;}
+    data.forEach(member=>{const row=document.createElement('div');row.className='member-row';const info=document.createElement('div');info.append(safeText('strong',member.full_name||member.email||'Member'),safeText('p',(member.email||'')+' · Username: '+(member.username||'—')+' · '+(member.phone||'No phone')+' · '+(member.selected_group||'No group')+' · KSh '+(groupFees[member.selected_group]||0).toLocaleString('en-KE')+' · '+member.membership_status.toUpperCase()),safeText('small','Payment reference: '+(member.payment_reference||'Not submitted')));const controls=document.createElement('div');controls.style.display='flex';controls.style.gap='8px';controls.style.flexWrap='wrap';if(member.user_id!==currentUser.id){if(member.membership_status==='pending'){const approve=safeText('button','Approve member');approve.type='button';approve.className='btn';approve.addEventListener('click',async()=>{if(!member.payment_reference){alert('No M-Pesa reference submitted. Ask the member to submit it first.');return;}if(!confirm('Confirm you have independently verified payment for '+(member.selected_group||'the selected group')+' (KSh '+(groupFees[member.selected_group]||0).toLocaleString('en-KE')+')?'))return;const {error:approveError}=await client.rpc('admin_set_member_status',{target_user:member.user_id,new_status:'active'});$('adminStatus').textContent=approveError?'Could not approve member: '+approveError.message:'Member approved and group access activated.';await refresh();});controls.append(approve);const reject=safeText('button','Reject request');reject.type='button';reject.className='btn';reject.addEventListener('click',async()=>{if(!confirm('Reject this membership request?'))return;const {error:rejectError}=await client.rpc('admin_set_member_status',{target_user:member.user_id,new_status:'rejected'});$('adminStatus').textContent=rejectError?'Could not reject request: '+rejectError.message:'Membership request rejected.';await refresh();});controls.append(reject);}const remove=safeText('button',member.membership_status==='removed'?'Restore access':'Remove member');remove.type='button';remove.className='btn';remove.addEventListener('click',async()=>{const next=member.membership_status==='removed'?'active':'removed';if(!confirm((next==='removed'?'Remove this member from the group?':'Restore this member as active?')+' This changes group access.'))return;const {error:updateError}=await client.rpc('admin_set_member_status',{target_user:member.user_id,new_status:next});$('adminStatus').textContent=updateError?'Could not update member: '+updateError.message:'Member status updated to '+next+'.';await refresh();});controls.append(remove);}row.append(info,controls);host.append(row);});
+  }
+  async function refresh(){
+    const {data:{session}}=await client.auth.getSession();currentUser=session?.user||null;
+    $('signOutBtn').hidden=!currentUser;$('paymentReferencePanel').hidden=!currentUser;$('memberLessons').hidden=true;$('adminDashboard').hidden=true;
+    if(!currentUser){$('selectedGroup').disabled=false;$('membershipStatus').textContent='Sign in or register to view your membership status.';return;}
+    const {data:profile,error}=await client.from('member_profiles').select('full_name,username,id_number,phone,selected_group,membership_status,payment_reference').eq('user_id',currentUser.id).maybeSingle();
+    if(error){$('membershipStatus').textContent='Could not load your profile. Check the Supabase setup.';return;}
+    if(profile){$('memberName').value=profile.full_name||'';$('memberUsername').value=profile.username||'';$('memberIdNumber').value=profile.id_number||'';$('memberPhone').value=profile.phone||'';$('paymentReference').value=profile.payment_reference||'';if(profile.selected_group && groupFees[profile.selected_group])$('selectedGroup').value=profile.selected_group;updateGroupFee();}
+    const status=profile?.membership_status||'pending';
+    if(status==='removed'||status==='rejected'){$('membershipStatus').textContent='Your group access is currently disabled. Contact TangjobLink support if you believe this is a mistake.';return;}
+    $('membershipStatus').textContent='Membership status: '+status.toUpperCase()+'. '+(status==='active'?'Your group dashboard is ready below.':'Select your group, submit its payment reference, and wait for administrator approval after payment verification.');
+    $('selectedGroup').disabled=status==='active';
+    if(status==='active'){
+      $('memberLessons').hidden=false;renderGroups(profile?.selected_group||'Beginner Group');
+      const [{data:resources,error:resourceError},{data:roleRows,error:roleError}]=await Promise.all([
+        client.from('member_resources').select('id,title,summary,required_documents,tools,links').order('sort_order'),
+        client.from('member_roles').select('role').eq('user_id',currentUser.id).maybeSingle()
+      ]);
+      if(resourceError){$('membershipStatus').textContent='Membership is active, but resources could not load. Check setup SQL.';}else renderResources(resources||[]);
+      const isAdmin=!roleError&&roleRows?.role==='admin';$('adminDashboard').hidden=!isAdmin;
+      await Promise.all([loadMeetings(isAdmin),loadMessages()]);if(isAdmin)await loadAdminMembers();
+    }
+  }
+  $('signUpBtn').addEventListener('click',async()=>{
+    const form=$('memberAuthForm');
+    if(!form.reportValidity())return;
+    const email=$('memberEmail').value.trim(),password=$('memberPassword').value,name=$('memberName').value.trim(),phone=$('memberPhone').value.trim(),idNumber=$('memberIdNumber').value.trim(),username=$('memberUsername').value.trim(),selectedGroup=$('selectedGroup').value,fee=groupFees[selectedGroup];
+    if(!name||!email||!idNumber||!username||password.length<8){msg('Complete your name, email, ID number, username and password (at least 8 characters).');return;}
+    if(!/^[A-Za-z0-9_.-]{3,30}$/.test(username)){msg('Username must be 3–30 characters and use only letters, numbers, dot, underscore or hyphen.');return;}
+    const enteredAmount=window.prompt('Enter the amount you are paying for '+selectedGroup+'. Required amount: KSh '+fee+'. Do not enter your M-Pesa PIN.');
+    if(enteredAmount===null){msg('Registration cancelled.');return;}
+    const numericAmount=Number(String(enteredAmount).replace(/[, ]/g,''));
+    if(!Number.isFinite(numericAmount)||numericAmount!==fee){alert('The amount must match the selected group fee: KSh '+fee+'. Please try again.');return;}
+    $('signUpBtn').disabled=true;$('signUpBtn').textContent='Registering…';
+    try {
+      const {data,error}=await client.auth.signUp({email,password,options:{data:{full_name:name,phone,selected_group:selectedGroup,id_number:idNumber,username,amount_entered:numericAmount}}});
+      if(error){msg(error.message);return;}
+      $('paymentReferencePanel').hidden=false;$('paymentAmountPrompt').textContent='Amount to pay: KSh '+fee.toLocaleString('en-KE')+' for '+selectedGroup+'. Enter the M-Pesa transaction code below after you pay.';
+      $('membershipStatus').textContent='Membership request is PENDING. Pay KSh '+fee+' to Paybill 247247, account 0112825493. Check '+email+' for the confirmation link. Your group access remains locked until the email is confirmed (if enabled), payment is independently verified and an admin approves your request.';
+      msg(data.session?'Registration created. Continue to payment below.':'Registration submitted. Check your email for the confirmation link, then sign in after confirming it. The payment instructions are shown below.');
+      await refresh();
+      // Keep payment instructions visible even when email confirmation means there is no active session yet.
+      $('paymentReferencePanel').hidden=false;
+      $('paymentAmountPrompt').textContent='Amount to pay: KSh '+fee.toLocaleString('en-KE')+' for '+selectedGroup+'. Enter the M-Pesa transaction code below after you pay.';
+      $('paymentReferencePanel').scrollIntoView({behavior:'smooth',block:'center'});
+    } finally {$('signUpBtn').disabled=false;$('signUpBtn').textContent='Register';}
+  });
+  $('memberAuthForm').addEventListener('submit',async e=>{e.preventDefault();const {error}=await client.auth.signInWithPassword({email:$('memberEmail').value.trim(),password:$('memberPassword').value});if(error){msg(error.message);return;}msg('Signed in successfully.');await refresh();});
+  $('resetPasswordBtn').addEventListener('click',async()=>{const email=$('memberEmail').value.trim();if(!email){msg('Enter your email address first, then select Reset password.');return;}const {error}=await client.auth.resetPasswordForEmail(email,{redirectTo:window.location.origin+window.location.pathname});msg(error?error.message:'If this email has an account, a password-reset link will be sent.');});
+  $('signOutBtn').addEventListener('click',async()=>{const {error}=await client.auth.signOut();msg(error?'Sign-out failed: '+error.message:'You have signed out.');await refresh();});
+  $('submitPaymentReference').addEventListener('click',async()=>{if(!currentUser){msg('Sign in first.');return;}const reference=$('paymentReference').value.trim().toUpperCase();if(!/^[A-Z0-9]{6,20}$/.test(reference)){$('membershipStatus').textContent='Enter the M-Pesa transaction code only (6–20 letters/numbers).';return;}
+    const selectedGroup=$('selectedGroup').value;const {error:groupError}=await client.rpc('member_choose_group',{target_group:selectedGroup});if(groupError){$('membershipStatus').textContent='Could not save selected group: '+groupError.message;return;}const {error}=await client.from('member_profiles').update({payment_reference:reference,phone:$('memberPhone').value.trim(),full_name:$('memberName').value.trim()}).eq('user_id',currentUser.id);
+    $('membershipStatus').textContent=error?'Could not submit reference: '+error.message:'Payment reference submitted for manual verification. Group access remains pending until payment is confirmed.';
+    if(!error){const message='TangjobLink payment verification request%0AEmail: '+encodeURIComponent(currentUser.email||'')+'%0AGroup: '+encodeURIComponent(selectedGroup)+'%0AM-Pesa transaction code: '+encodeURIComponent(reference)+'%0AFee: KSh '+groupFees[selectedGroup]+'%0APaybill: 247247%0AAccount: 0112825493';window.open('https://wa.me/254797858453?text='+message,'_blank','noopener');}
+  });
+  $('groupMessageForm').addEventListener('submit',async e=>{e.preventDefault();if(!currentUser)return;const message=$('groupMessageText').value.trim();if(!message)return;const authorName=$('memberName').value.trim()||currentUser.email||'Member';const {error}=await client.from('group_messages').insert({user_id:currentUser.id,author_name:authorName,message,group_name:$('selectedGroup').value});if(error){msg('Could not post message: '+error.message);return;}$('groupMessageText').value='';await loadMessages();});
+  $('meetingForm').addEventListener('submit',async e=>{e.preventDefault();const title=$('meetingTitle').value.trim(),groupName=$('meetingGroup').value,startsAt=new Date($('meetingStart').value);const meetingUrl=$('meetingLink').value.trim(),notes=$('meetingNotes').value.trim();if(!title||Number.isNaN(startsAt.getTime()))return;if(meetingUrl&&!meetingUrl.startsWith('https://')){$('adminStatus').textContent='Meeting link must start with https://';return;}const {error}=await client.from('group_meetings').insert({title,group_name:groupName,starts_at:startsAt.toISOString(),meeting_url:meetingUrl||null,notes:notes||null,created_by:currentUser.id});$('adminStatus').textContent=error?'Could not schedule meeting: '+error.message:'Meeting scheduled and published to the member dashboard.';if(!error){$('meetingForm').reset();await loadMeetings(true);}});
+  client.auth.onAuthStateChange(()=>{setTimeout(()=>refresh(),0);});
+  refresh();
+})();
+</script>
+
+</body></html>

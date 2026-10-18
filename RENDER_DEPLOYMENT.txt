@@ -1,0 +1,14 @@
+TangjobLink - Render static site deployment
+
+The site files are in /site. When creating the Render Static Site use:
+  Build command: echo "No build required"
+  Publish directory: site
+  Branch: main
+
+Before publishing, configure the Supabase project URL and anon/publishable key in site/index.html by replacing:
+  PASTE_YOUR_SUPABASE_PROJECT_URL_HERE
+  PASTE_YOUR_SUPABASE_ANON_KEY_HERE
+
+Run supabase_setup.sql in the SQL Editor of the separate TangjobLink Supabase project first.
+Do not place Supabase service-role keys or passwords in site files or this repository.
+Membership payment verification remains manual; do not activate a member until payment is independently verified.
